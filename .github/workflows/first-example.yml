@@ -4,8 +4,13 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
+              
             - name: welcome message
               run: echo "My first github action workflow"
 
             - name: second message
               run: echo "My second github action workflow"
+            - name: readfile
+              run: cat README.md
