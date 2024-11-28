@@ -9,7 +9,9 @@ jobs:
 
             - name: check repo file
               run: ls
-              
+
             - name: Executing shell script
-              run: ./ascii-script.sh
+              run: |
+              chmod +x ascii-script.sh
+              ./ascii-script.sh
              
