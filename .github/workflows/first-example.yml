@@ -6,11 +6,18 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
-              
+
             - name: welcome message
               run: echo "My first github action workflow"
 
-            - name: second message
-              run: echo "My second github action workflow"
-            - name: readfile
-              run: cat README.md
+            - name: list and read files 
+              run: |
+               echo "My second github action workflow"
+               ls -ltra
+               cat README.md
+
+            - name: genearate ascii values 
+              run: cowsay -f dragon "RUN for cover i am dragan......rawwar" >> dragon.txt
+
+            # - name: readfile
+            #   run: cat README.md
